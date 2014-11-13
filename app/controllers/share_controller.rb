@@ -7,12 +7,14 @@ post '/shares/new' do
   @song = Song.new(title: params[:song][:title], artist: params[:song][:artist], link: params[:song][:link])
 
   if @song.save
-    @share = Share.new(user_id: '#{current_user.id}', song_id: @song.id)
+    @share = Share.new(user_id: "#{current_user.id}", song_id: @song.id)
     @share.save
   else
     puts "saving failed!"
     erb :new_share
   end
+
+  redirect '/'
 
 end
 
