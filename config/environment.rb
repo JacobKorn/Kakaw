@@ -17,13 +17,15 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
-
+require 'sinatra/partial'
 require 'erb'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
+
+set :partial_template_engine, :erb
 
 configure do
   # By default, Sinatra assumes that the root is the file that calls the configure block.
