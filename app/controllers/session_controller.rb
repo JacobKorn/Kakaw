@@ -6,8 +6,8 @@ end
 post '/users/sign_up' do
   user = User.new
   form_data = params[:user]
-  user.username = form_data[:username]
-  user.email = form_data[:email]
+  user.username = form_data[:username].downcase
+  user.email = form_data[:email].downcase
   user.password = form_data[:password] if password_matches?(form_data)
   
   if !password_matches?(form_data)
@@ -28,7 +28,7 @@ get '/users/sign_in' do
 end
 
 post '/users/sign_in' do
-  user = User.find_by( username: params[:user][:username])
+  user = User.find_by( username: params[:user][:username].downcase)
 
   if user.password == params[:user][:password]
     session[:user_id] = user.id

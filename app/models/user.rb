@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
   has_many :shares
   has_many :songs, :through => :shares
 
+  def gravatar
+  	hash = Digest::MD5.hexdigest(self.email.downcase)
+  	img_src = "http://www.gravatar.com/avatar/#{hash}"
+  end
+
 end

@@ -1,0 +1,2 @@
+require 'digest/md5'
+
