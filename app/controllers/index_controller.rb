@@ -1,7 +1,7 @@
 
 
 get '/' do
-  @user = User.first
+  @user = current_user
   @message = "Hellow Kawkillites"
   
   erb :index

@@ -39,7 +39,21 @@ post '/users/sign_in' do
   end
 end
 
+get '/users/sign_out' do
+  session[:user_id] = nil
+  @message = "Logged out"
+  redirect '/'
+end
 
+#### Use this method to check if is user signed in
+#### and limit their acces to pages
+def current_user
+  if session[:user_id]
+    @current_user ||= User.find(session[:user_id])
+  else
+    false
+  end
+end
 
 
 def password_matches?(form_data)
