@@ -10,7 +10,7 @@
   <div class="grid_4" id="share_card">
     <p><img src="" class="med_icon" alt="Title"/> <%= share.song.title %></p>
     <p><img src="" class="med_icon" alt="Artist"/> <%= share.song.artist %></p>
-    <!-- <p><img src="" class="med_icon" alt="Album"/> <%= share.song.album %></p> -->
+    <p><img src="<%= share.song.album_art %>" class="med_icon" alt="Album"/> <%= share.song.album %></p>
     <p><img src="" class="small_icon" alt="Username"/><%= share.user.username %></p>
     <p><img src="" class="small_icon" alt="Posted"/><%= share.created_at %></p>
     <p><img src="" class="small_icon" alt="Play count"/> <%= share.song.click_count %></p>

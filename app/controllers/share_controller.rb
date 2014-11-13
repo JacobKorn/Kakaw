@@ -3,8 +3,8 @@ get '/shares/new' do
 end
 
 post '/shares/new' do 
-
-  @song = Song.new(title: params[:song][:title], artist: params[:song][:artist], link: params[:song][:link])
+  default_image = "http://i.imgur.com/dHiHbqP.png?1"
+  @song = Song.new(title: params[:song][:title], artist: params[:song][:artist], link: params[:song][:link], album_art:default_image)
 
   if @song.save
     @share = Share.new(user_id: "#{current_user.id}", song_id: @song.id)

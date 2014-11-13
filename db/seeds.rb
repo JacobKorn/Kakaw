@@ -16,7 +16,7 @@ song_urls = ["https://soundcloud.com/1080pcollection/04-idgafam", "https://sound
 songs = []
 
 20.times do |song|
-  song = Song.create(artist: Faker::App.name, title: Faker::Commerce.product_name, link: song_urls.sample)
+  song = Song.create(artist: Faker::App.name, title: Faker::Commerce.product_name, link: song_urls.sample, album_art: "http://i.imgur.com/dHiHbqP.png?1")
   songs << song
 end
 
