@@ -24,6 +24,6 @@ post '/shares/:id/reshare' do
   reshare.song_id = params[:id]
   reshare.save
 
-  redirect to('/users/#{current_user.id}/profile')
+  redirect to("/users/#{current_user.id}/profile")
 
 end
