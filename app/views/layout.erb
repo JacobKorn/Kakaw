@@ -16,11 +16,19 @@
       <a href="/"><h2 alt="Kakaw">Kakaw</h2></a>
     </div>
     <nav>
-      <ul>
-        <li><div class="grid_2"><p>Login</p></div></li>
-        <li><div class="grid_2"><p>Sign-up</p></div></li>
-      </ul>
-    <nav>
+    <!--   <p><%= @message %></p>
+    <br> -->
+    <% if current_user %>
+      <%= "signed in as <strong>#{current_user.username}</strong>" %> | <a href="/users/sign_out">Sign Out</a>
+    <% else %>
+      <div>
+        <ul>
+          <li><a href="/users/sign_in"><div class="grid_2"><p>Login</p></div></li></a>
+          <li><a href="/users/sign_up"><div class="grid_2"><p>Sign-up</p></div></li></a>
+        </ul>
+      </div>
+    <% end %>
+    </nav>
   </header>
   <div class="container">  
     <%= yield %>

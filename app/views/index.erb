@@ -4,7 +4,7 @@
   <div class="grid_4" id="share_card">
     <p><img src="" class="med_icon" alt="Title"/> <%= share.song.title %></p>
     <p><img src="" class="med_icon" alt="Artist"/> <%= share.song.artist %></p>
-    <p><img src="" class="med_icon" alt="Album"/> <%= share.song.album %></p>
+    <!-- <p><img src="" class="med_icon" alt="Album"/> <%= share.song.album %></p> -->
     <p><img src="" class="small_icon" alt="Username"/><%= share.user.username %></p>
     <p><img src="" class="small_icon" alt="Posted"/><%= share.created_at %></p>
     <p><img src="" class="small_icon" alt="Play count"/> <%= share.song.click_count %></p>
@@ -12,15 +12,3 @@
   </div>
 
 <% end %>
-
-  <p><%= @message %></p>
-  <br>
-  <% if current_user %>
-    <%= "signed in as <strong>#{current_user.username}</strong>" %> | <a href="/users/sign_out">Sign Out</a>
-  <% else %>
-    <div>
-      <a href="/users/sign_in">Sign In</a>
-       | 
-      <a href="/users/sign_up">Sign Up</a>
-    </div>
-  <% end %>
