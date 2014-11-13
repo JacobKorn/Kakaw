@@ -1,3 +1,6 @@
+require 'digest/md5'
+
+
 class User < ActiveRecord::Base
   # Remember to create a migration!
   validates :username, :email, :password, presence: true 
