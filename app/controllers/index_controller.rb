@@ -1,8 +1,7 @@
 
 
 get '/' do
-  @user = current_user
-  @message = "Hellow Kawkillites"
+  @shares = Share.all
   
   erb :index
 end

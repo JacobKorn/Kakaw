@@ -7,7 +7,7 @@ post '/users/sign_up' do
   user = User.new
   form_data = params[:user]
   user.username = form_data[:username]
-  user.email
+  user.email = form_data[:email]
   user.password = form_data[:password] if password_matches?(form_data)
   
   if !password_matches?(form_data)
