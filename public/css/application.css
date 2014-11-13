@@ -8,8 +8,8 @@ header {
 
 .container {
   margin: 85px auto;
-  width: 960px;
-  padding: 0px 20px 20px 20px;
+  width: 100%;
+  background-color: #f2f2f2;
   /*border: 1px dotted black; */
 }
 th {
@@ -22,4 +22,19 @@ height: 88px;
 
 header a {
   color: #fff;
+}
+
+.small_profile {
+  height: 42px;
+  width: 42px;
+}
+
+#share_stream {
+  padding-top: 60px;
+}
+
+#share_card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
