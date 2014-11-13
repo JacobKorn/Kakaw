@@ -9,13 +9,43 @@ post '/users/sign_up' do
   user.username = form_data[:username]
   user.email
   user.password = form_data[:password] if password_matches?(form_data)
-  user.save
+  
+  if !password_matches?(form_data)
+    @message = "Your Passwords Must Match"
+    erb :sign_up
+  elsif user.save
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    @message = user.errors.messages
+    erb :sign_up
+  end
+end
 
-  redirect '/'
+get '/users/sign_in' do
 
+  erb :sign_in
+end
+
+post '/users/sign_in' do
+  user = User.find_by( username: params[:user][:username])
+
+  if user.password == params[:user][:password]
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    @message = "Incorrect Password"
+    erb :sign_in
+  end
 end
 
 
+
+
 def password_matches?(form_data)
-  true if form_data[:password] == form_data[:password_confirm]
+  if form_data[:password] == form_data[:password_confirm]
+    true
+  else
+    false
+  end
 end
