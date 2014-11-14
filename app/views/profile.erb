@@ -5,6 +5,5 @@
   <div class="grid_9" id=""> 
         <p>Username: <%= @user.username %></p>
         <p>User since: <%= @user.created_at %></p>
-        <p>Songs shared:<%= @shares.where("user_id = ?", @user.id).count %></p>
   </div>
 </div>
