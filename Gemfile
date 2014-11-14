@@ -15,6 +15,8 @@ gem 'activerecord'
 gem 'rake'
 gem 'sinatra-partial'
 
+gem 'thin'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
