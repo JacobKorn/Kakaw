@@ -1,19 +1,26 @@
-<form action='<%= "/shares/new" %>' method="post">
+<div class="container_12 body_container">
+  <div class="grid_12 rounded_card">
+  <h2>Share a Song:</h2>
 
-  <label name="song[title]">Title:</label>
-  <br />
-  <input type="text" name="song[title]"/>
-  <br />
+    <form action='<%= "/shares/new" %>' method="post">
 
-  <label name="song[artist]">Artist:</label>
-  <br />
-  <input type="text" name="song[artist]"/>
-  <br />
+      <label name="song[title]">Title:</label>
+      <br />
+      <input type="text" name="song[title]"/>
+      <br />
 
-  <label name="song[link]">Link:</label>
-  <br />
-  <input type="text" name="song[link]"/>
-  <br />
+      <label name="song[artist]">Artist:</label>
+      <br />
+      <input type="text" name="song[artist]"/>
+      <br />
 
-  <input type="submit">
-</form>
+      <label name="song[link]">Link:</label>
+      <br />
+      <input type="text" name="song[link]"/>
+      <br />
+
+      <input type="submit">
+    </form>
+
+</div>
+</div>
