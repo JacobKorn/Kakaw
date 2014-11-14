@@ -38,3 +38,41 @@ header a {
   margin-bottom: 20px;
   border-radius: 4px;
 }
+
+#logo {
+  margin-top: 20px;
+}
+
+.header_link_wrapper {
+  margin-top: 20px;
+  float: right;
+}
+
+/*Header Icons*/
+
+.header_icon {
+  border-radius: 100%;
+  height: 42px;
+  width: 42px;
+  background-color: #ea4c88;
+  float: left;
+  margin-right: 15px;
+}
+
+.header_link_wrapper p {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+#share {
+  background-image: ;
+  width: 100%;
+  height: 100%;
+}
+
+#stream {
+  background-image: url("http://i.imgur.com/EFEP9i8.png");
+  width: 100%;
+  height: 100%;
+}
+
