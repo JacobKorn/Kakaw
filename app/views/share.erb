@@ -1,0 +1,23 @@
+<div class="grid_6 share_card">
+  <div class="card_user_wrapper">
+    <div class="card_profile_pic">
+      <img src="<%= share.user.gravatar %>" class="small_profile"/></div>
+    </div>
+    <div class="card_user_details">
+      <a href="/users/<%= share.user_id %>"><p><%= share.user.username %></p></a>
+      <p><%= share.created_at %></p>
+    </div>  
+  </div>
+  <div class="card_grey_content">
+    <div class="card_grey_left">
+      <p><%= share.song.album %></p>
+    </div>
+    <div class="card_grey_right">
+      <p><%= share.song.title %></p>
+      <p><%= share.song.artist %></p>
+    </div>
+  </div>
+  <div class="card_add_share">
+    <a href="#" onclick="reshare(<%= share.song_id %>)"><p>Add to stream</p></a>
+  </div>  
+</div>

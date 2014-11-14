@@ -1,14 +1,19 @@
-<div class="alert_message"><%= @message %></div>
+<!-- <div class="alert_message"><%= @message %></div> -->
 
-<div><span>Log in: </span>
-	<form action="/users/sign_in" method="post">
-		<label name="user[username]"></label>
-		<input type="text" name="user[username]">
 
-		<label name="user[password]"></label>
-		<input type="password" name="user[password]">
+<div class="container_12 body_container">
+  <div class="grid_12 rounded_card">
+  <h2>Sign-up to Kakaw</h2>
+    <div><span>Log in: </span>
+    	<form action="/users/sign_in" method="post">
+    		<label name="user[username]"></label>
+    		<input type="text" name="user[username]">
 
-		<input type="submit" value="Sign In">
+    		<label name="user[password]"></label>
+    		<input type="password" name="user[password]">
 
-	</form>
+    		<input type="submit" value="Sign In">
+
+    	</form>
+    </div>
 </div>

@@ -10,6 +10,7 @@ header {
   margin: 85px auto;
   width: 100%;
   background-color: #f2f2f2;
+  padding-bottom: 300px;
   /*border: 1px dotted black; */
 }
 th {
@@ -29,14 +30,28 @@ header a {
   width: 42px;
 }
 
-#share_stream {
+.large_profile {
+  height: 80px;
+  width: 80px;
+}
+
+.body_container {
   padding-top: 60px;
+}
+
+.rounded_card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 30px 30px;
+  box-shadow: 0px 0px 8px #a2a2a2;
 }
 
 #share_card {
   background-color: #fff;
   margin-bottom: 20px;
   border-radius: 4px;
+  box-shadow: 0px 0px 8px #a2a2a2;
 }
 
 #logo {
@@ -56,23 +71,31 @@ header a {
   width: 42px;
   background-color: #ea4c88;
   float: left;
-  margin-right: 15px;
+  margin-right: 12px;
+  position: relative;
 }
 
 .header_link_wrapper p {
   font-size: 11px;
   text-transform: uppercase;
+  padding-top: 5px;
 }
 
-#share {
-  background-image: ;
+.header_link_wrapper a {
+  text-decoration: none;
+}
+
+.header_link_wrapper a:hover {
+  color: #d6d6d6;
+}
+
+.header_icon img {
+  position: absolute;
+}
+
+/* Cards */
+
+#user_details {
+  padding: 10px;
   width: 100%;
-  height: 100%;
 }
-
-#stream {
-  background-image: url("http://i.imgur.com/EFEP9i8.png");
-  width: 100%;
-  height: 100%;
-}
-

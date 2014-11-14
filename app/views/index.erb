@@ -1,17 +1,21 @@
 <div class="alert_message"><%= @message %></div>
 
-<div class="container_12" id="share_stream">
+<div class="container_12 body_container">
 
 <% @shares.each do |share| %>
 
     <div class="grid_6" id="share_card">
+      <div id="user_details">
+        <div class="floating_left"><img src="<%= share.user.gravatar %>" class="small<p>_profile" alt="Username"/></div>
+        <div class="floating_left"><a href="/users/profile/<%= share.user_id %>"><p><%= share.user.username %></p></a></div>
+      </div>
       <p><img src="<%= share.song.album_art %>" class="med_icon" alt="Album"/> <%= share.song.album %></p>
-      <img src="" class="med_icon" alt="Title"/><p><%= share.song.title %></p>
-      <img src="" class="med_icon" alt="Artist"/><p><%= share.song.artist %></p>
+      <h4>Title:</h4><p><%= share.song.title %></p>
+      <h4>Artist:</h4><p><%= share.song.artist %></p>
       <!-- <img src="" class="med_icon" alt="Album"/> <%= share.song.album %></p> -->
-      <img src="<%= share.user.gravatar %>" class="small<p>_profile" alt="Username"/><a href="/users/<%= share.user_id %>"><p><%= share.user.username %></p></a>
-      <img src="" class="small_icon" alt="Posted"/><p><%= share.created_at %></p>
-      <img src="" class="small_icon" alt="Play count"/><p><%= share.song.click_count %></p>
+      <h4>Shared:</h4><p><%= share.created_at %></p>
+      <h4>Plays:</h4><p><%= share.song.click_count %></p>
+      <a href="<%= share.song.link%>"><h3>Play song</h3></a>
       <a href="#" onclick="reshare(<%= share.song_id %>)"><p>Add to stream</p></a>
     </div>
 

@@ -1,9 +1,34 @@
-<div class="profile_container">
-  <div class="grid_3">
-    <img src="" alt="Profile picture" class="large_profile_picture">
-  </div>
-  <div class="grid_9" id=""> 
-        <p>Username: <%= @user.username %></p>
-        <p>User since: <%= @user.created_at %></p>
-  </div>
+<div class="container_12 body_container">
+  <div class="grid_12 rounded_card"> 
+    <div class="grid_3">
+      <img src="<%= @user.gravatar %>" alt="Profile picture" class="large_profile">
+    </div>
+    <div class="grid_9" id=""> 
+          <p>Username: <%= @user.username %></p>
+          <p>User since: <%= @user.created_at %></p>
+    </div>
+  </div>  
+</div>
+
+<div class="container_12 body_container">    
+
+<% @shares.each do |share| %>
+
+    <div class="grid_6" id="share_card">
+      <div id="user_details">
+        <div class="floating_left"><img src="<%= share.user.gravatar %>" class="small<p>_profile" alt="Username"/></div>
+        <div class="floating_left"><a href="/users/profile/<%= share.user_id %>"><p><%= share.user.username %></p></a></div>
+      </div>
+      <p><img src="<%= share.song.album_art %>" class="med_icon" alt="Album"/> <%= share.song.album %></p>
+      <h4>Title:</h4><p><%= share.song.title %></p>
+      <h4>Artist:</h4><p><%= share.song.artist %></p>
+      <!-- <img src="" class="med_icon" alt="Album"/> <%= share.song.album %></p> -->
+      <h4>Shared:</h4><p><%= share.created_at %></p>
+      <h4>Plays:</h4><p><%= share.song.click_count %></p>
+      <a href="<%= share.song.link%>"><h3>Play song</h3></a>
+      <a href="#" onclick="reshare(<%= share.song_id %>)"><p>Add to stream</p></a>
+    </div>
+
+<% end %>
+
 </div>
