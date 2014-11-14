@@ -14,7 +14,6 @@ gem 'activerecord'
 
 gem 'rake'
 gem 'sinatra-partial'
-gem 'shotgun'
 
 group :test do
   gem 'shoulda-matchers'
@@ -23,7 +22,9 @@ group :test do
   gem 'capybara'
 end
 
+gem 'faker'
+
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
+  gem 'shotgun'
 end
