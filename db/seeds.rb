@@ -1,5 +1,9 @@
 require 'faker'
 
+User.destroy_all
+Song.destroy_all
+Share.destroy_all
+
 users = []
 
 10.times do |user|
