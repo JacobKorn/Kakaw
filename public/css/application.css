@@ -95,7 +95,8 @@ header a {
 
 /* Cards */
 
-#user_details {
-  padding: 10px;
-  width: 100%;
+.god {
+  padding-top: 15px;
+  width: 85%;
+  margin: auto;
 }

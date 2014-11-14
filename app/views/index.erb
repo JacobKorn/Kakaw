@@ -5,6 +5,7 @@
 <% @shares.each do |share| %>
 
     <div class="grid_6" id="share_card">
+      <div class="god">
       <div id="user_details">
         <div class="floating_left"><img src="<%= share.user.gravatar %>" class="small<p>_profile" alt="Username"/></div>
         <div class="floating_left"><a href="/users/profile/<%= share.user_id %>"><p><%= share.user.username %></p></a></div>
@@ -17,6 +18,7 @@
       <h4>Plays:</h4><p><%= share.song.click_count %></p>
       <a href="<%= share.song.link%>"><h3>Play song</h3></a>
       <a href="#" onclick="reshare(<%= share.song_id %>)"><p>Add to stream</p></a>
+    </div>
     </div>
 
 <% end %>
