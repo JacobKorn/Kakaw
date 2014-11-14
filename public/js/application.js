@@ -5,3 +5,10 @@ $(document).ready(function() {
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
+
+
+function reshare(song_id){
+	// alert("/shares/" + song_id + "/reshare");
+	$.post( "/shares/" + song_id + "/reshare" );
+
+}

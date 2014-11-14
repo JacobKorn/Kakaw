@@ -11,7 +11,7 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-
+gem 'sinatra-partial'
 gem 'shotgun'
 
 group :test do
