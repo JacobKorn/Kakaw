@@ -13,7 +13,10 @@ post '/shares/new' do
     else
       erb :new_share
     end
-    redirect '/'
+    @message = @song.errors.messages
+    @shares = Share.all.reverse
+    erb :index
+    # redirect '/'
   
 end
 
